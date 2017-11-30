@@ -9,28 +9,44 @@
 namespace test;
 require_once 'vendor/autoload.php';
 
+use PhpAmqpLib\Connection\AMQPStreamConnection;
+use PhpAmqpLib\Message\AMQPMessage;
+
 class Rabbitmq
 {
 
     /*
      * 连接属性
      */
-    public $host = '127.0.0.1';
-    public $vhost = '/';
-    public $user = 'guest';
-    public $password = 'guest';
-    public $exchanges = 'dafault';
-    public $queue = 'dafault';
-    public $Routekey = 'dafault';
+    private $host = '127.0.0.1';
+    private $port = '5672';
+    private $vhost = '/';
+    private $user = 'guest';
+    private $password = 'guest';
+
+    /*
+     * 交换机，队列，路由设置
+     */
+    private $exchanges = 'dafault';
+    private $queue = 'dafault';
+    private $routekey = 'dafault';
 
     /**
-     * 自动连接rabbitmq
+     * 构造函数
      */
-    private function __construct(){
-        $this->connect();
-    }
-    
-    public function connect($host,$vhost,$user,$password,$exchanges,$queue,$Routekey){
+    private function __construct( $rabbitmqConfig ){
 
     }
+
+    private function set_config(){
+
+    }
+
+    private function connect(){
+
+    }
+
+
+
+
 }
