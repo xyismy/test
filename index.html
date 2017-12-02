@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div><a href="www.baidu.com">123123</a></div>
+    <div class="aClick" >点击事件</div>
+</body>
+
+<script>
+    $('.aClick').click(function(){
+        console.log($('a').attr('href'));
+    });
+</script>
+</html>
